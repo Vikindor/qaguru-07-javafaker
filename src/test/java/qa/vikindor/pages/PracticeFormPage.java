@@ -35,7 +35,7 @@ public class PracticeFormPage {
     private final Map<Field, SelenideElement> controls = Map.of(
             Field.FIRST_NAME,  firstNameInput,
             Field.LAST_NAME,   lastNameInput,
-            Field.GENDER,      genderAnyLabel,   // тут не border, а color
+            Field.GENDER,      genderAnyLabel,
             Field.USER_NUMBER, userNumberInput
     );
 
