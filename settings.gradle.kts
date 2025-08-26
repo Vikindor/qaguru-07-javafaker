@@ -1,0 +1,1 @@
+rootProject.name = "qaguru-07-javafaker"
