@@ -5,8 +5,9 @@ import qa.vikindor.config.TestBase;
 import qa.vikindor.pages.PracticeFormPage;
 import qa.vikindor.pages.components.ResultModal;
 
-import static qa.vikindor.pages.components.ResultModal.*;
 import static qa.vikindor.utils.RandomUtils.*;
+import static qa.vikindor.pages.components.ResultModal.*;
+import static qa.vikindor.pages.PracticeFormPage.Field.*;
 
 
 public class PracticeFormTests extends TestBase {
@@ -95,9 +96,9 @@ public class PracticeFormTests extends TestBase {
                 .removeBanner()
                 .submit()
                 .shouldBeValidated()
-                .shouldHaveRedBorder("firstName")
-                .shouldHaveRedBorder("lastName")
-                .shouldHaveRedBorder("gender")
-                .shouldHaveRedBorder("userNumber");
+                .shouldHaveRedBorder(FIRST_NAME)
+                .shouldHaveRedBorder(LAST_NAME)
+                .shouldHaveRedBorder(GENDER)
+                .shouldHaveRedBorder(USER_NUMBER);
     }
 }
