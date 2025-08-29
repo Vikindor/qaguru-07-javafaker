@@ -72,10 +72,10 @@ public class RandomUtils {
 
     public static String getRandomCity(String state) {
         return switch (state) {
-            case "NCR"           -> getRandomItemFromArray(new String[]{"Delhi", "Gurgaon", "Noida"});
-            case "Uttar Pradesh" -> getRandomItemFromArray(new String[]{"Agra", "Lucknow", "Merrut"});
-            case "Haryana"       -> getRandomItemFromArray(new String[]{"Karnal", "Panipat"});
-            case "Rajasthan"     -> getRandomItemFromArray(new String[]{"Jaipur", "Jaiselmer"});
+            case "NCR"           -> faker.options().option("Delhi", "Gurgaon", "Noida");
+            case "Uttar Pradesh" -> faker.options().option("Agra", "Lucknow", "Merrut");
+            case "Haryana"       -> faker.options().option("Karnal", "Panipat");
+            case "Rajasthan"     -> faker.options().option("Jaipur", "Jaiselmer");
             default              -> throw new IllegalArgumentException("Unknown state: " + state);
         };
     }
